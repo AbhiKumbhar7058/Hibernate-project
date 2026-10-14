@@ -1,0 +1,34 @@
+package com.app;
+
+import java.time.LocalDate;
+
+import com.dao.PaymentDao;
+import com.dao.PaymentDAOImpl;
+import com.entity.Cheque;
+import com.entity.CreditCard;
+
+public class App {
+
+    public static void main(String[] args) {
+
+        PaymentDao dao = new PaymentDAOImpl();
+
+        CreditCard card = new CreditCard();
+
+        card.setPayId(1);
+        card.setPayAmt(5000);
+        card.setPayDate(LocalDate.now());
+        card.setCardType("VISA");
+
+        dao.saveCredicard(card);
+
+        Cheque cheque = new Cheque();
+
+        cheque.setPayId(2);
+        cheque.setPayAmt(7000);
+        cheque.setPayDate(LocalDate.now());
+        cheque.setBankName("SBI");
+
+        dao.saveCheque(cheque);
+    }
+}

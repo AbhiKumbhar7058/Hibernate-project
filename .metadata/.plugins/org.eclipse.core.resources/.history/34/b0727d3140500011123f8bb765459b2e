@@ -1,0 +1,17 @@
+package com.entity;
+
+import javax.persistence.Entity;
+
+@Entity
+public class CreditCard extends Payment {
+
+	private String cardType;
+
+	public String getCardType() {
+		return cardType;
+	}
+
+	public void setCardType(String cardType) {
+		this.cardType = cardType;
+	}
+}

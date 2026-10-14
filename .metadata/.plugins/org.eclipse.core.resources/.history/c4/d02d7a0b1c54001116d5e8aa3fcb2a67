@@ -1,0 +1,136 @@
+package com.dao;
+
+import java.util.List;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.entity.Department;
+import com.entity.Student;
+import com.utility.HibernateUtility;
+
+public class DepartmentDaoImpl implements DepartmentDao{
+
+	@Override
+	public void saveDepartment(Department department) {
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = null;
+		try {
+			System.out.println("-----------------SAVE-----------------");
+			tx = session.beginTransaction();
+			session.persist(department);
+			System.out.println("---------------PERSIST CALL DONE---------------");
+			tx.commit();
+			System.out.println("--------------After TX COmmit ----------------");
+		} catch (Exception e) {
+			if(tx != null) {
+				tx.rollback();
+				throw e;
+			}
+		}finally {
+			session.clear();
+		}
+		
+	}
+
+	@Override
+	public Department getDepartmentById(Integer id) {
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		Department department = null;
+		try {
+			department = session.get(Department.class, id);
+			
+		} finally {
+			session.close();
+		}
+		return null;
+	}
+
+	@Override
+	public List<Department> getAllDepartmants() {
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		List<Department> depts;
+		try {
+			depts = session.createQuery("from Department", Department.class).list();
+		} finally {
+			session.close();
+		}
+		                   
+		return depts;
+	}
+
+	@Override
+	public void upateDepartment(Department department) {
+
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = null;
+		try {
+			System.out.println("----------------------MERGE | UPDATE-----------------");
+			tx = session.beginTransaction();
+			session.merge(department);
+			System.out.println("--------------MERGE Call Done ----------------");
+			tx.commit();
+			System.out.println("-----------------After TX COMMIT ----------------");
+		} catch (Exception e) {
+			if(tx != null)
+				tx.rollback();
+			throw e;
+		}finally {
+			session.close();
+		}
+	}
+
+	@Override
+	public void deleteDepartment(Integer id) {
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = null;
+		try {
+			tx = session.beginTransaction();
+			Department department = session.get(Department.class, id);
+			if(department != null)
+				session.remove(department);
+			tx.commit();
+		} catch (Exception e) {
+			if(tx != null)
+				tx.rollback();
+			throw e;
+		}finally {
+			session.close();
+		}
+		
+	}
+
+	@Override
+	public void addStudent(Integer depId, Student student) {
+		SessionFactory factory = HibernateUtility.getSessionFactory();
+		Session session = factory.openSession();
+		Transaction tx = null;
+		Department department = session.get(Department.class, deptId);
+
+		if (department != null) {
+			try {
+				tx = session.beginTransaction();
+				student.setDepartment(department);
+				session.persist(student);
+
+				tx.commit();
+			} catch (Exception e) {
+				if (tx != null)
+					tx.rollback();
+
+				throw e;
+			} finally {
+				session.close();
+			}
+
+		} else {
+			// throw
+		}
+	}		
+}

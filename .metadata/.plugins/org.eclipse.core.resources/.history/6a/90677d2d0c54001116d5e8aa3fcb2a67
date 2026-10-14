@@ -1,0 +1,10 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ManyToOne {
+	requires java.persistence;
+	requires java.desktop;
+}

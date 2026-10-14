@@ -1,0 +1,48 @@
+package com.dao;
+
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+
+import com.entity.Department;
+import com.entity.Student;
+
+public class DepartmentDaoImpl implements DepartmentDao{
+
+	@Override
+	public void saveDepartment(Department department) {
+		SessionFactory factory =
+		
+	}
+
+	@Override
+	public Department getDepartmentById(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Department> getAllDepartmants() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void upateDepartment(Department department) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteDepartment(Integer id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addStudent(Integer depId, Student student) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

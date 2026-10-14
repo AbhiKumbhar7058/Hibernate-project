@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * 
+ */
+module ManyToOne {
+	requires java.persistence;
+}

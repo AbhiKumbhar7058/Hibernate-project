@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.hibernate.boot.spi.AbstractDelegatingSessionFactoryOptions"/>
+    <fullyQualifiedTypeName name="java.util.zip.ZipEntry"/>
+    <fullyQualifiedTypeName name="com.dao.StudentDaoImpl"/>
+    <fullyQualifiedTypeName name="com.app.StudentDaoImpl"/>
+    <fullyQualifiedTypeName name="javax.transaction.Transaction"/>
+    <fullyQualifiedTypeName name="javax.security.auth.login.Configuration"/>
+    <fullyQualifiedTypeName name="javax.management.Query"/>
+    <fullyQualifiedTypeName name="antlr.collections.List"/>
+    <fullyQualifiedTypeName name="java.lang.module.Configuration"/>
+    <fullyQualifiedTypeName name="org.hibernate.query.criteria.internal.expression.ConcatExpression"/>
+    <fullyQualifiedTypeName name="javax.naming.ConfigurationException"/>
+    <fullyQualifiedTypeName name="javax.net.ssl.ExtendedSSLSession"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.dao.StudentDao"/>
+    <fullyQualifiedTypeName name="org.hibernate.Query"/>
+    <fullyQualifiedTypeName name="com.dao.PaymentDao"/>
+    <fullyQualifiedTypeName name="com.dao.PaymentDAOImpl"/>
+    <fullyQualifiedTypeName name="com.entity.CreditCard"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="com.entity.Payment"/>
+    <fullyQualifiedTypeName name="com.entity.Cheque"/>
+    <fullyQualifiedTypeName name="org.hibernate.Hibernate"/>
+    <fullyQualifiedTypeName name="com.utiity.HibernateUtility"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.entity.Student"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="javax.persistence.GenerationType"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+    <fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+    <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Table"/>
+    <fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
+    <fullyQualifiedTypeName name="org.hibernate.cfg.Configuration"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="org.hibernate.SessionFactory"/>
+    <fullyQualifiedTypeName name="com.utility.HibernateUtility"/>
+    <fullyQualifiedTypeName name="org.hibernate.Session"/>
+    <fullyQualifiedTypeName name="org.hibernate.jpa.internal.AfterCompletionActionLegacyJpaImpl"/>
+    <fullyQualifiedTypeName name="org.hibernate.Transaction"/>
+    <fullyQualifiedTypeName name="com.entity.Department"/>
+    <fullyQualifiedTypeName name="com.dao.DepartmentDao"/>
+</qualifiedTypeNameHistroy>
